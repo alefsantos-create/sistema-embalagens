@@ -1601,7 +1601,7 @@ h1,h2,h3,h4,p,label,small,.muted,.panel-auto-info,.report-description,.permissio
 }
 </style>
 <style>.wms-type-picker{margin:16px 0;padding:14px;border:1px solid #9cc4e1;border-radius:10px;background:#f4f9fd}.wms-type-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.wms-type-grid label{display:grid;grid-template-columns:24px 1fr;align-items:center;gap:4px 8px;padding:10px;border:1px solid #bed3e2;border-radius:8px;background:#fff;cursor:pointer;min-height:58px}.wms-type-grid input{width:22px;height:22px;grid-row:span 2}.wms-type-grid span{font-weight:700}.wms-type-grid small{color:#527086}</style></head><body class="logged-out">
-<div id="login" class="login"><div class="loginbox"><h1>Solicitação de Embalagens</h1><div class="login-version" style="display:inline-block;margin:0 0 12px;padding:6px 12px;border:1px solid #b6d5e8;border-radius:8px;background:#eef7fc;color:#185a86;font-size:14px;font-weight:700">Versão v26.57 • Oficial</div><p class="muted">Use o mesmo usuário e senha do sistema atual.</p><div class="field"><label>Usuário</label><input id="loginUser" value="" autocomplete="username" placeholder="Ex.: admin, pce, carimbo"></div><div class="field"><label>Senha</label><input id="loginPass" type="password"></div><button class="btn primary" style="width:100%" onclick="login()">ENTRAR</button><p id="loginMsg" class="red"></p><div class="login-contact">Caso de dúvidas, entrar em contato com <b>Alef Felipe</b> no ramal <b>6652</b> ou WhatsApp: <b>45 9 9127-5143</b>.</div></div></div>
+<div id="login" class="login"><div class="loginbox"><h1>Solicitação de Embalagens</h1><div class="login-version" style="display:inline-block;margin:0 0 12px;padding:6px 12px;border:1px solid #b6d5e8;border-radius:8px;background:#eef7fc;color:#185a86;font-size:14px;font-weight:700">Versão v26.58 • Oficial</div><p class="muted">Use o mesmo usuário e senha do sistema atual.</p><div class="field"><label>Usuário</label><input id="loginUser" value="" autocomplete="username" placeholder="Ex.: admin, pce, carimbo"></div><div class="field"><label>Senha</label><input id="loginPass" type="password"></div><button class="btn primary" style="width:100%" onclick="login()">ENTRAR</button><p id="loginMsg" class="red"></p><div class="login-contact">Caso de dúvidas, entrar em contato com <b>Alef Felipe</b> no ramal <b>6652</b> ou WhatsApp: <b>45 9 9127-5143</b>.</div></div></div>
 <header class="top"><div class="brand"><button id="menuButton" class="hamb" type="button" onclick="toggleNav()" aria-label="Ocultar menu" aria-expanded="true">☰</button><span class="brand-title">📦 Solicitação de Embalagens <small class="version-badge">v26.56 • Oficial</small></span></div><div class="top-right"><div id="weatherBox" class="weather-box" title="Temperatura da sua localização"><div id="weatherIcon" class="weather-icon">🌡️</div><div><div class="weather-main"><span id="weatherTemp" class="weather-temp">--°C</span><button class="weather-refresh" onclick="loadWeather(true)" title="Atualizar temperatura" aria-label="Atualizar temperatura">↻</button></div><span id="weatherCity" class="weather-city">Localizando sua cidade...</span></div></div><div class="clock"><div id="hora" class="time">--:--:--</div><div id="data" class="date">--</div></div></div></header>
 <div class="layout"><button class="menu-backdrop" type="button" onclick="closeNav()" aria-label="Fechar menu"></button><aside><div class="nav"><button data-sec="rh" onclick="go('rh')">🧑‍🤝‍🧑 RH • Desenvolvimento</button><button data-sec="dashboard" onclick="go('dashboard')">📊 Dashboard</button><button data-sec="wms" onclick="go('wms')">🗺️ WMS • Localizações</button><button data-sec="wmsconfig" style="padding-left:28px" onclick="go('wmsconfig')">↳ Configuração dos blocos</button><button data-sec="nova" onclick="go('nova')">➕ Nova solicitação</button><button data-sec="painel" onclick="go('painel')">📋 Painel Carimbo</button><button data-sec="adiantamento" onclick="go('adiantamento')">⏩ Adiantamento</button><button data-sec="painelestoque" onclick="go('painelestoque')">📦 Painel Estoque</button><button data-sec="apontamentos" onclick="go('apontamentos')">📝 Itens apontados</button><button data-sec="relatorios" onclick="go('relatorios')">📄 Relatórios</button><button data-sec="configuracoes" onclick="go('configuracoes')">⏱️ Configurações de tempos</button><button data-sec="cadastro" onclick="go('cadastro')">🛠️ Ajuste de cadastro</button><button data-sec="funcionarios" onclick="go('funcionarios')">👷 Funcionários</button><button data-sec="organizarmenu" onclick="go('organizarmenu')">↕️ Organizar menu</button><button data-sec="usuarios" onclick="go('usuarios')">👥 Usuários e liberações</button></div><div class="userbox"><b id="userName"></b><br><span id="userRole"></span><br><button class="btn" style="margin-top:10px" onclick="logout()">Sair</button></div></aside>
 <main>
@@ -2034,35 +2034,7 @@ h1,h2,h3,h4,p,label,small,.muted,.panel-auto-info,.report-description,.permissio
 
   <div id="sessionLimitsSummary" class="session-limits-summary"></div>
   <div id="activeSessions"></div>
-  <div class="audit-panel">
-    <div class="audit-head">
-      <div><h3>🧾 Histórico de auditoria • últimos 10 registros</h3></div>
-      <div class="audit-filters">
-        <input id="auditDate" type="date" onchange="loadAuditLog()">
-        <input id="auditUser" placeholder="Filtrar usuário..." oninput="debouncedAuditLoad()">
-        <select id="auditAction" onchange="loadAuditLog()">
-          <option value="">Todas as ações</option>
-          <option value="login">Login</option>
-          <option value="logout">Logout</option>
-          <option value="create">Nova solicitação</option>
-          <option value="start">Iniciar atendimento</option>
-          <option value="finish">Finalizar solicitação</option>
-          <option value="cancel">Cancelar solicitação</option>
-          <option value="saveUser">Salvar usuário</option>
-          <option value="saveEmployee">Salvar funcionário</option>
-          <option value="saveWms">Alterar WMS</option>
-          <option value="saveAdvance">Adiantamento</option>
-          <option value="withdrawAdvance">Retirada adiantamento</option>
-          <option value="importCodes">Importar cadastro</option>
-          <option value="saveSettings">Configurações</option>
-          <option value="createBackup">Backup manual</option>
-          <option value="terminateSession">Encerrar sessão</option>
-        </select>
-        <button class="btn" onclick="loadAuditLog()">ATUALIZAR</button>
-      </div>
-    </div>
-    <div id="auditLog"></div>
-  </div>
+
 </div></section>
 </main></div><div id="labelRequestAlert" class="label-request-alert hidden"></div><div id="readyItemAlert" class="ready-item-alert hidden"></div><div id="teamTaskPersistentAlert" class="team-task-persistent-alert hidden"></div><div id="persistentReminderNotice" class="persistent-reminder-notice hidden"></div><div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><div class="app-modal-head"><h2 id="mtitle"></h2><button class="app-modal-x" type="button" aria-label="Fechar janela" onclick="closeModal()">×</button></div><div id="mbody"></div><div class="modal-standard-footer" style="text-align:right;margin-top:15px"><button class="btn" onclick="closeModal()">Fechar</button></div></div></div><div id="alertBackdrop" class="alert-backdrop hidden" aria-hidden="true"></div><div id="alert" class="alert hidden" role="alertdialog" aria-modal="true"></div><div id="eventAlertBackdrop" class="event-alert-backdrop hidden" aria-hidden="true"></div><div id="eventAlert" class="event-alert hidden" role="alertdialog" aria-modal="true"></div>
 
@@ -4550,7 +4522,7 @@ async function saveStandaloneSessionLimit(){
         alert('Limite de acessos salvo com sucesso.');
     }catch(e){alert('Erro ao salvar limite: '+e.message)}
 }
-async function loadSecurityPanel(){loadAuditLog();
+async function loadSecurityPanel(){
     if(!can('usuarios'))return;
     try{
         let data=await apiCall('securityStatus'),sessions=Array.isArray(data.sessions)?data.sessions:[];
@@ -4579,52 +4551,6 @@ async function createManualBackup(){
     try{let r=await apiCall('createBackup','POST',{});await loadSecurityPanel();alert('Backup criado com sucesso: '+(r.folder||''))}catch(e){alert('Erro ao criar backup: '+e.message)}
 }
 
-let auditTimer=null;
-function debouncedAuditLoad(){clearTimeout(auditTimer);auditTimer=setTimeout(loadAuditLog,350)}
-function auditActionLabel(action){
-    const labels={login:'Login',logout:'Logout',create:'Nova solicitação',start:'Início atendimento',finish:'Finalização',cancel:'Cancelamento',saveUser:'Usuário / permissões',saveEmployee:'Funcionário',saveWms:'WMS',saveAdvance:'Adiantamento',withdrawAdvance:'Retirada adiantamento',importCodes:'Importação cadastro',saveSettings:'Configurações',createBackup:'Backup manual',terminateSession:'Sessão encerrada',saveProduct:'Cadastro de produto',saveTraining:'Treinamento',saveBirthday:'Aniversário',savePcp:'PCP'};
-    return labels[action]||action||'-'
-}
-
-function auditStateText(v){
-    if(v===null||v===undefined||v==='')return '—';
-    if(typeof v==='string')return v;
-    if(Array.isArray(v))return v.join(', ');
-    if(typeof v==='object'){
-        const preferred=['name','username','role','active','maxSessions','permissions','matricula','badge','sector','function','shift','responsible','location','panelRefreshSeconds','lateAlertMinutes','executionAlertMinutes','carimboFifoEnabled'];
-        let keys=[...preferred.filter(k=>Object.prototype.hasOwnProperty.call(v,k)),...Object.keys(v).filter(k=>!preferred.includes(k)&&!['password','passwordHash'].includes(k))];
-        return keys.slice(0,18).map(k=>{
-            let val=v[k];
-            if(Array.isArray(val))val=val.join(', ');
-            else if(val&&typeof val==='object')val=JSON.stringify(val);
-            if(k==='active')val=val?'Ativo':'Inativo';
-            if(k==='maxSessions')val=Number(val||0)===0?'Ilimitado':val;
-            return `${k}: ${val===null||val===''?'—':val}`;
-        }).join(' | ');
-    }
-    return String(v)
-}
-async function loadAuditLog(){
-    if(!can('usuarios')||!$('auditLog'))return;
-    let d=$('auditDate')?.value||'',u=($('auditUser')?.value.trim()||'').toLowerCase(),a=$('auditAction')?.value||'';
-    try{
-        let raw=(d||u||a)?await fbRead('audit'):(await FB.ref('audit').orderByChild('createdAt').limitToLast(10).once('value')).val(),rows=fbArr(raw).map(r=>({
-            ...r,
-            at:r.at||r.createdAt||'',
-            username:r.username||r.actor||'',
-            userName:r.userName||r.actor||'',
-            summary:r.summary||'',
-            before:r.before??r.body?.before??null,
-            after:r.after??r.body?.after??r.body??null,
-            ip:r.ip||'Firebase'
-        }));
-        if(d)rows=rows.filter(r=>String(r.at||'').slice(0,10)===d);
-        if(u)rows=rows.filter(r=>[r.userName,r.username,r.actor].some(v=>String(v||'').toLowerCase().includes(u)));
-        if(a)rows=rows.filter(r=>String(r.action||'')===a);
-        rows.sort((x,y)=>String(y.at||'').localeCompare(String(x.at||'')));rows=rows.slice(0,10);
-        $('auditLog').innerHTML=rows.length?`<div class="tablewrap"><table class="table audit-table"><thead><tr><th>Data / hora</th><th>Usuário</th><th>Ação</th><th>Detalhes</th><th>Antes</th><th>Depois</th><th>Origem</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${escHtml(r.at?fmt(r.at):'-')}</td><td><b>${escHtml(r.userName||r.username||'-')}</b><br><small>${escHtml(r.username||'-')}</small></td><td><span class="audit-action">${escHtml(auditActionLabel(r.action))}</span></td><td><div class="audit-detail">${escHtml(r.summary||'-')}</div></td><td><div class="audit-detail">${escHtml(auditStateText(r.before))}</div></td><td><div class="audit-detail">${escHtml(auditStateText(r.after))}</div></td><td class="audit-ip">${escHtml(r.ip||'Firebase')}</td></tr>`).join('')}</tbody></table></div>`:'<div class="audit-empty">Nenhum registro encontrado para os filtros informados.</div>';
-    }catch(e){$('auditLog').innerHTML='<div class="red">Erro ao carregar auditoria do Firebase: '+escHtml(e.message)+'</div>'}
-}
 async function loadUsers(){try{users=await apiCall('listUsers');let sel=$('uSelect');let keep=editingUserOriginal;sel.innerHTML='<option value="">+ Novo usuário</option>'+users.map(u=>`<option value="${escHtml(u.username)}">${escHtml(u.name)} — ${escHtml(u.username)}</option>`).join('');if(keep&&users.some(u=>u.username===keep))sel.value=keep;populateSessionLimitUsers();$('users').innerHTML=users.length?`<div class="tablewrap users-tablewrap"><table class="table users-table"><thead><tr><th>Nome</th><th>Usuário</th><th>Perfil</th><th>Status</th><th>Liberações</th><th>Ação</th></tr></thead><tbody>${users.map(u=>`<tr><td><b>${escHtml(u.name)}</b></td><td>${escHtml(u.username)}</td><td>${u.role==='admin'?'Administrador':'Operador'}<br><small class="muted">Acessos: ${Number(u.maxSessions||0)===0?'Ilimitado':Number(u.maxSessions||0)}</small></td><td><span class="${u.active!==false?'green':'red'}">${u.active!==false?'Ativo':'Inativo'}</span></td><td class="users-permissions">${escHtml((u.permissions||[]).join(', ')||'Nenhuma')}</td><td class="users-actions"><button class="btn" onclick="selectUserForEdit('${String(u.username).replaceAll("'","\\'")}')">EDITAR PERMISSÕES</button></td></tr>`).join('')}</tbody></table></div>`:'<span class="muted">Nenhum usuário cadastrado.</span>'}catch(e){$('users').innerHTML='<div class="red">Erro ao carregar usuários: '+escHtml(e.message)+'</div>'}}
 
 function setPermBoxes(perms=[]){$('pDash').checked=perms.includes('dashboard');$('pWms').checked=perms.includes('wms');$('pWmsConfig').checked=perms.includes('wmsconfig');$('pNova').checked=perms.includes('nova');$('pPainel').checked=perms.includes('painel');$('pAdiantamento').checked=perms.includes('adiantamento');$('pPainelEstoque').checked=perms.includes('painelestoque');$('pIniciarAtendimento').checked=perms.includes('iniciaratendimento');$('pDadosFinalizacao').checked=perms.includes('dadosfinalizacao');$('pEditarLote').checked=perms.includes('editarlote');$('pMatriculaCarimbo').checked=perms.includes('matriculacarimbo');$('pTeamAlert').checked=perms.includes('rotinaalerta');$('pRequestAlert').checked=perms.includes('solicitacaoalerta');$('pReadyAlert').checked=perms.includes('prontoalerta');$('pTeamTasks').checked=perms.includes('apontamentos');$('pRel').checked=perms.includes('relatorios');$('pEstoqueAlerta').checked=perms.includes('estoquealerta');$('pConfig').checked=perms.includes('configuracoes');$('pCad').checked=perms.includes('cadastro');$('pFunc').checked=perms.includes('funcionarios');$('pRh').checked=perms.includes('rh');$('pMenuOrder').checked=perms.includes('organizarmenu');$('pUsr').checked=perms.includes('usuarios')}
