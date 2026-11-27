@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Embalagens | Gestão v26.87 • Teste Regras</title><style>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>Embalagens | Gestão v26.88 • Cancelamento de Adiantamentos</title><style>
 :root{--bg:#0e1012;--panel:#171a1e;--panel2:#20242a;--border:#30363e;--text:#f4f5f6;--muted:#aab1b9;--red:#ef4444;--yellow:#f59e0b;--green:#22c55e;--blue:#60a5fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px Arial,sans-serif;overflow:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}.hidden{display:none!important}.top{height:82px;background:#14171a;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:12px 24px;position:fixed;top:0;left:0;right:0;z-index:50}.brand{font-size:21px;font-weight:700}.clock{text-align:right}.clock .time{font-size:34px;font-weight:800;line-height:1}.clock .date{color:var(--muted);font-size:14px;margin-top:5px}.layout{display:block;min-height:100vh;padding-top:82px}aside{position:fixed;left:0;top:82px;bottom:0;width:245px;background:#2d3339;border-right:1px solid var(--border);padding:18px 12px;overflow-y:auto;z-index:40}.nav button{display:block;width:100%;text-align:left;background:#e3e7eb;border:1px solid #c6ced6;color:#263746;padding:13px 14px;border-radius:8px;margin-bottom:7px;font-weight:700;transition:.15s ease}.nav button.active{background:#cbd5df;color:#102a43;border-color:#9fb0bf}.nav button:hover{background:#d5dde5;color:#102a43;border-color:#aebdca}.userbox{border-top:1px solid var(--border);margin-top:15px;padding:15px 8px;color:var(--muted)}main{margin-left:245px;height:calc(100vh - 82px);padding:22px;overflow-y:auto;overflow-x:hidden}.section{display:none}.section.active{display:block}.title{font-size:24px;margin:0 0 18px}.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:18px}.metric{font-size:30px;font-weight:800;margin-top:8px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.field{margin-bottom:14px}.field label{display:block;font-weight:700;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;background:#0e1012;color:#fff;border:1px solid #3b424b;border-radius:7px;padding:13px}.field textarea{resize:vertical;min-height:96px}.field input.badcode{border-color:var(--red);box-shadow:0 0 0 2px #ef444433}.field input.goodcode{border-color:var(--green);box-shadow:0 0 0 2px #22c55e33}.btn{border:1px solid var(--border);background:#272d34;color:#fff;border-radius:7px;padding:11px 16px}.btn.primary{background:#e5e7eb;color:#111;border:0;font-weight:700}.btn.green{background:#183522;border-color:#285c38}.btn.cancel{background:#2a1718;border-color:#6b2629;color:#ffb4b4}.cancelbox{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:#211719;border:1px solid #5c292d;border-radius:9px;padding:7px 10px;color:#ffb4b4;font-weight:700;cursor:pointer}.cancelbox input{appearance:none;width:20px;height:20px;border:2px solid #8d4449;border-radius:5px;background:#111417;display:grid;place-items:center;margin:0}.cancelbox input:checked{background:#ef4444;border-color:#ef4444}.cancelbox input:checked:after{content:'✓';color:white;font-size:14px;font-weight:900;line-height:1}.btn.red{background:#35191b}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:12px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}.badge{font-weight:700}.red{color:var(--red)}.yellow{color:var(--yellow)}.green{color:var(--green)}.blue{color:var(--blue)}.request{border-left:5px solid var(--red);margin-bottom:9px;padding:14px;background:var(--panel);border-radius:9px;display:grid;grid-template-columns:90px 1fr 100px 130px 140px;gap:12px;align-items:center}.request.exec{border-left-color:var(--yellow)}.request.done{border-left-color:var(--green)}.late{box-shadow:0 0 0 1px #7f1d1d inset}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.show{display:flex}.modalbox{width:min(760px,100%);background:#181b1f;border:1px solid var(--border);border-radius:12px;padding:22px}.sig{background:#0d0f11;border:1px solid #3b424b;border-radius:7px}.sig canvas{width:100%;height:160px;display:block;touch-action:none}.login{position:fixed;inset:0;background:#0e1012;display:flex;align-items:center;justify-content:center}.loginbox{width:min(420px,92%);background:var(--panel);padding:28px;border:1px solid var(--border);border-radius:12px}.alert-backdrop{position:fixed;inset:0;background:#000b;z-index:119;cursor:not-allowed;touch-action:none;overscroll-behavior:contain}.late-alert-open{overflow:hidden}.alert{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#3a1719;border:1px solid #8b2a2d;padding:24px;border-radius:14px;z-index:120;width:min(720px,calc(100vw - 32px));max-width:720px;max-height:84vh;overflow:auto;box-shadow:0 24px 70px #000e;font-size:17px;line-height:1.35}.alert b{font-size:21px}.alert .btn{font-size:17px;padding:12px 20px}.alert-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.alert-close{width:38px;height:38px;border-radius:9px;border:1px solid #7a3237;background:#271215;color:#fff;font-size:24px;line-height:1;display:grid;place-items:center;flex:0 0 auto}.alert-close:hover{background:#3a1719}.alert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.late-summary{color:#ffd7dc;font-size:13px;margin:5px 0 14px}.late-request-list{display:grid;gap:10px}.late-request-card{border:1px solid #8b343d;border-left:5px solid #ff4d6d;border-radius:12px;padding:13px 14px;background:linear-gradient(145deg,rgba(83,20,30,.82),rgba(42,16,28,.88))}.late-request-card .late-line{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.late-request-card .late-code{font-size:18px;font-weight:900}.late-request-card .late-wait{display:inline-flex;padding:5px 9px;border-radius:999px;background:#ff4d6d22;border:1px solid #ff4d6d66;color:#ffd0d8;font-size:12px;font-weight:900;white-space:nowrap}.late-request-meta{font-size:13px;color:#f3c7cd;margin-top:5px;line-height:1.5}.late-request-card .btn{margin-top:10px;font-size:13px;padding:9px 12px}.late-reminder-section{margin-top:14px;border:1px solid #74406d;border-radius:12px;padding:13px;background:linear-gradient(145deg,rgba(53,22,49,.86),rgba(34,20,50,.86))}.late-reminder-section.training{border-left:5px solid #f97316}.late-reminder-section.birthday{border-left:5px solid #a855f7}.late-reminder-section h3{margin:0 0 7px;font-size:16px}.late-reminder-item{padding:8px 0;border-bottom:1px solid #4a2e51;font-size:13px}.late-reminder-item:last-child{border-bottom:0}.late-reminder-item b{font-size:14px}.late-reminder-item span{display:block;color:#e2d4e8;margin-top:3px}.alert-footer{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:14px}.alert.shaking{animation:lateShake .11s linear 0s 12 alternate,latePulse 1.5s ease-in-out 1.35s infinite}.alert.shaking:before{content:'';position:absolute;inset:-6px;border:2px solid #ef4444;border-radius:18px;opacity:.18;pointer-events:none;animation:ringPulse 1.2s ease-in-out infinite}@keyframes lateShake{0%{transform:translate(-50%,-50%) translateX(-5px) rotate(-.25deg)}100%{transform:translate(-50%,-50%) translateX(5px) rotate(.25deg)}}@keyframes latePulse{0%,100%{box-shadow:0 24px 70px #000e}50%{box-shadow:0 24px 80px #000f,0 0 0 3px #ef444466}}@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.12}50%{transform:scale(1.03);opacity:.38}}@media(prefers-reduced-motion:reduce){.alert.shaking,.alert.shaking:before{animation:none}}.bar{height:9px;background:#2a2f35;border-radius:10px;overflow:hidden}.bar span{display:block;height:100%;background:var(--blue)}@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}}@media(max-width:900px){aside{left:-260px;top:82px;bottom:0;z-index:45;transition:.2s;box-shadow:8px 0 24px #0008}.layout.open aside{left:0}main{margin-left:0}.cards{grid-template-columns:repeat(2,1fr)}.request{grid-template-columns:1fr 1fr}.hamb{display:block!important}}@media(max-width:600px){.top{padding:10px 14px}.brand{font-size:17px}.clock .time{font-size:24px}.clock .date{font-size:12px}.cards,.grid{grid-template-columns:1fr}main{padding:14px}.request{grid-template-columns:1fr}.hamb{display:block!important}.top .brand{display:flex;gap:8px;align-items:center}.hamb{background:transparent;color:#fff;border:0;font-size:25px}}
 
 /* Controles visuais */
@@ -865,6 +865,9 @@ h1,h2,h3,h4,p,label,small,.muted,.panel-auto-info,.report-description,.permissio
 /* V19.1 • restaura abertura dos adiantamentos ao clicar */
 .advance-row[onclick]{cursor:pointer}
 .advance-row[onclick]:hover{filter:brightness(.985);box-shadow:0 4px 14px rgba(28,78,110,.10)}
+.advance-production-cancel{display:block;width:100%;max-width:190px;min-height:36px;margin-top:9px;padding:7px 10px;border:1px solid #c95c5c!important;border-radius:8px;background:#fff1f1!important;color:#a52f2f!important;font-size:10px;font-weight:900;line-height:1.2;white-space:normal;cursor:pointer}
+.advance-production-cancel:hover{background:#ffe2e2!important}
+@media(max-width:900px){.advance-production-cancel{max-width:none;min-height:42px;font-size:12px}}
 .advance-wait-message{margin-top:12px;padding:14px;border:1px solid #e0bd64;border-radius:10px;background:#fff8e5;color:#77570e;line-height:1.45}
 
 /* V19.4 • finalização automática do adiantamento ao separar */
@@ -1198,7 +1201,7 @@ h1,h2,h3,h4,p,label,small,.muted,.panel-auto-info,.report-description,.permissio
 .rule-row-actions{display:flex;gap:6px;flex-wrap:wrap}.rule-row-actions button{min-height:36px}
 @media(max-width:650px){#ruleList table{min-width:550px}}
 </style></head><body class="logged-out">
-<div id="login" class="login"><div class="loginbox"><h1>Solicitação de Embalagens</h1><div class="login-version" style="display:inline-block;margin:0 0 12px;padding:6px 12px;border:1px solid #b6d5e8;border-radius:8px;background:#eef7fc;color:#185a86;font-size:14px;font-weight:700">Versão v26.87 • Teste Regras</div><p class="muted">Use o mesmo usuário e senha do sistema atual.</p><div class="field"><label>Usuário</label><input id="loginUser" value="" autocomplete="username" placeholder="Ex.: admin, pce, carimbo"></div><div class="field"><label>Senha</label><input id="loginPass" type="password"></div><button class="btn primary" style="width:100%" onclick="login()">ENTRAR</button><p id="loginMsg" class="red"></p><div class="login-contact">Caso de dúvidas, entrar em contato com <b>Alef Felipe</b> no ramal <b>6652</b> ou WhatsApp: <b>45 9 9127-5143</b>.</div></div></div>
+<div id="login" class="login"><div class="loginbox"><h1>Solicitação de Embalagens</h1><div class="login-version" style="display:inline-block;margin:0 0 12px;padding:6px 12px;border:1px solid #b6d5e8;border-radius:8px;background:#eef7fc;color:#185a86;font-size:14px;font-weight:700">Versão v26.88 • Cancelamento de Adiantamentos</div><p class="muted">Use o mesmo usuário e senha do sistema atual.</p><div class="field"><label>Usuário</label><input id="loginUser" value="" autocomplete="username" placeholder="Ex.: admin, pce, carimbo"></div><div class="field"><label>Senha</label><input id="loginPass" type="password"></div><button class="btn primary" style="width:100%" onclick="login()">ENTRAR</button><p id="loginMsg" class="red"></p><div class="login-contact">Caso de dúvidas, entrar em contato com <b>Alef Felipe</b> no ramal <b>6652</b> ou WhatsApp: <b>45 9 9127-5143</b>.</div></div></div>
 <header class="top"><div class="brand"><button id="menuButton" class="hamb" type="button" onclick="toggleNav()" aria-label="Ocultar menu" aria-expanded="true">☰</button><span class="brand-title">📦 Solicitação de Embalagens <small class="version-badge">v26.85 • Teste Regras</small></span></div><div class="top-right"><div id="weatherBox" class="weather-box" title="Temperatura da sua localização"><div id="weatherIcon" class="weather-icon">🌡️</div><div><div class="weather-main"><span id="weatherTemp" class="weather-temp">--°C</span><button class="weather-refresh" onclick="loadWeather(true)" title="Atualizar temperatura" aria-label="Atualizar temperatura">↻</button></div><span id="weatherCity" class="weather-city">Localizando sua cidade...</span></div></div><div class="clock"><div id="hora" class="time">--:--:--</div><div id="data" class="date">--</div></div></div></header>
 <div class="layout"><button class="menu-backdrop" type="button" onclick="closeNav()" aria-label="Fechar menu"></button><aside><div class="nav"><button data-sec="dashboard" onclick="go('dashboard')">📊 Dashboard</button><button data-sec="wms" onclick="go('wms')">🗺️ WMS • Localizações</button><button data-sec="wmsconfig" style="padding-left:28px" onclick="go('wmsconfig')">↳ Configuração dos blocos</button><button data-sec="nova" onclick="go('nova')">➕ Nova solicitação</button><button data-sec="painel" onclick="go('painel')">📋 Painel Carimbo</button><button data-sec="adiantamento" onclick="go('adiantamento')">⏩ Adiantamento</button><button data-sec="painelestoque" onclick="go('painelestoque')">📦 Painel Estoque</button><button data-sec="apontamentos" onclick="go('apontamentos')">📝 Itens apontados</button><button data-sec="relatorios" onclick="go('relatorios')">📄 Relatórios</button><button data-sec="configuracoes" onclick="go('configuracoes')">⏱️ Configurações de tempos</button><button data-sec="cadastro" onclick="go('cadastro')">🛠️ Ajuste de cadastro</button><button data-sec="regrasproduto" onclick="go('regrasproduto')">🏷️ Regras por Produto</button><button data-sec="funcionarios" onclick="go('funcionarios')">👷 Funcionários</button><button data-sec="usuarios" onclick="go('usuarios')">👥 Usuários e liberações</button></div><div class="userbox"><b id="userName"></b><br><span id="userRole"></span><br><button class="btn" style="margin-top:10px" onclick="logout()">Sair</button></div></aside>
 <main>
@@ -1872,7 +1875,14 @@ async function firebaseApiCall(rawAction,method='GET',body=null){
      row={...f.row,status:newRemaining>0?'parcial':'retirado',withdrawnQuantity:withdrawn,remainingQuantity:newRemaining,requestedQuantity:0,withdrawals:hist,pickedUpByMatricula:f.row.withdrawalRequestedByMatricula||f.row.authorizedByMatricula||'',pickedUpAt:now,pickedTypeDayKey:newRemaining<=0?fbPickedTypeDayKey(f.row,now):null,pickedTypeDayCodeKey:newRemaining<=0?fbPickedTypeDayCodeKey(f.row,now):null,deliveredByMatricula:deliveryEmp.matricula||deliveryIdent,deliveredByName:deliveryEmp.name||'',deliveredByUsername:deliveryEmp.name||'',deliveredAt:now};
    }
    if(action==='pickupAdvance'||action==='markAdvanceAsWithdrawnLegacy'||action==='withdrawAdvance'){let now=fbNow(),stamp=row.pickedUpAt||now,deliveryMatricula=fbNorm(body?.deliveryMatricula||body?.matricula||'');if(action==='pickupAdvance'){if(!deliveryMatricula)throw new Error('Informe a matrícula de quem está entregando.');let deliveryEmp=await fbEmployee(deliveryMatricula);if(!deliveryEmp)throw new Error('Funcionário que está entregando não encontrado no cadastro.');row.deliveredByMatricula=deliveryEmp.matricula;row.deliveredByName=deliveryEmp.name||'';}row={...row,status:'retirado',pickedUpAt:stamp,pickedTypeDayKey:fbPickedTypeDayKey(row,stamp),pickedTypeDayCodeKey:fbPickedTypeDayCodeKey(row,stamp)}}
-   if(action==='cancelAdvance')row.status='cancelado';
+   if(action==='cancelAdvance'){
+     const currentStatus=String(f.row.status||'programado').toLowerCase();
+     if(['retirado','cancelado','descartado'].includes(currentStatus))throw new Error('Este adiantamento já está encerrado e não pode ser cancelado.');
+     const cancelMatricula=fbNorm(body?.matricula||''),cancelReason=String(body?.reason||'').trim();
+     if(!cancelMatricula)throw new Error('Informe a matrícula de quem está cancelando.');
+     if(!cancelReason)throw new Error('Selecione o motivo do cancelamento.');
+     row={...f.row,status:'cancelado',requestedQuantity:0,cancelReason,cancelDetails:String(body?.details||''),cancelledByMatricula:cancelMatricula,cancelledAt:fbNow()};
+   }
    if(action==='discardAdvanceBalance')row.status='descartado';
    if(action==='editAdvanceType'){
       const newType=String(body?.type||body?.newType||row.type).toLowerCase();
@@ -2436,6 +2446,7 @@ function renderProductRules(){
  }).join('')+'</tbody></table>';
 }
 // v26.87: o destino da etiqueta depende do tipo escolhido no lançamento.
+// v26.88: Produção pode cancelar adiantamentos pendentes diretamente no painel.
 // Embalagem -> pacote; Etiqueta -> caixa. A regra pode permitir os dois destinos.
 function labelApplicationForType(rule,type){
  const applied=rule?.processMethod==='etiqueta_aplicada'&&rule.active!==false;
@@ -3014,19 +3025,26 @@ async function confirmAdvanceTypeEdit(){
 
 function openAdvanceCancel(id){
  let x=advances.find(a=>a.id===id);if(!x)return;
- if(x.status==='retirado')return alert('Este adiantamento já foi retirado e não pode ser cancelado.');
- if(x.status==='cancelado')return alert('Este adiantamento já está cancelado.');
+ let status=String(x.status||'programado').toLowerCase();
+ if(status==='retirado')return alert('Este adiantamento já foi totalmente retirado e não pode ser cancelado.');
+ if(status==='cancelado')return alert('Este adiantamento já está cancelado.');
+ if(status==='descartado')return alert('Este adiantamento já foi encerrado por descarte e não pode ser cancelado.');
  currentId=id;
+ const withdrawn=advanceWithdrawnQty(x),remaining=advanceRemainingQty(x);
  $('mtitle').textContent='Cancelar adiantamento';
  $('mbody').innerHTML=`<div class="card advance-cancel-summary">
    <b>Solicitação #${String(Number(x.number||0)).padStart(4,'0')}</b>
    <div><b>${escHtml(x.code)} — ${escHtml(x.productName||'-')}</b></div>
-   <div>${x.type==='etiqueta'?'Etiqueta':'Pacote'} • ${escHtml(x.quantity)} UN • Turno ${escHtml(advanceShiftKey(x.shift)||x.shift)}º</div>
+   <div>${x.type==='etiqueta'?'Etiqueta':'Pacote'} • Total adiantado: ${escHtml(x.quantity)} UN • Turno ${escHtml(advanceShiftKey(x.shift)||x.shift)}º</div>
+   <div>Já retirado: <b>${withdrawn} UN</b></div>
    <div class="advance-date-highlight"><small>📅 Para o dia</small><strong>${formatDateOnly(advanceDateKey(x.forDate)||x.forDate)}</strong></div>
+   <div class="advance-balance-highlight"><small>SALDO QUE SERÁ CANCELADO</small><strong>${remaining} UN</strong></div>
  </div>
+ <div class="advance-cancel-warning">⚠️ O cancelamento encerra este adiantamento e retira o saldo restante da lista de pendentes. ${withdrawn>0?'A quantidade que já foi retirada continuará registrada no histórico.':'Use se a data estiver incorreta ou se a Produção não precisar mais do material.'}</div>
  <div class="field"><label>Motivo do cancelamento</label>
    <select id="advanceCancelReason" class="select-modern" onchange="toggleAdvanceCancelOther()">
      <option value="">Selecione</option>
+     <option value="Data do adiantamento incorreta">Data do adiantamento incorreta</option>
      <option value="Volume maior que precisa">Volume maior que precisa</option>
      <option value="Solicitação duplicada">Solicitação duplicada</option>
      <option value="Não será mais necessário">Não será mais necessário</option>
@@ -3035,8 +3053,8 @@ function openAdvanceCancel(id){
  </div>
  <div id="advanceCancelOtherWrap" class="field hidden"><label>Justificativa</label><textarea id="advanceCancelDetails" rows="3" placeholder="Explique o motivo do cancelamento"></textarea></div>
  <div class="field"><label>Matrícula de quem está cancelando</label><input id="advanceCancelMat" inputmode="numeric" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="Digite a matrícula"></div>
- <div class="advance-cancel-warning">⚠️ O cancelamento fica registrado no histórico com motivo, matrícula, data e hora.</div>
- <button class="btn btn-danger advance-cancel-confirm" style="width:100%" onclick="confirmAdvanceCancel()">CANCELAR ADIANTAMENTO</button>`;
+ <div class="advance-cancel-warning">O cancelamento ficará registrado no histórico com o motivo, matrícula, data e hora.</div>
+ <button class="btn btn-danger advance-cancel-confirm" style="width:100%" onclick="confirmAdvanceCancel()">CONFIRMAR CANCELAMENTO</button>`;
  $('modal').classList.add('show','request-modal')
 }
 function toggleAdvanceCancelOther(){
@@ -3050,7 +3068,8 @@ async function confirmAdvanceCancel(){
  if(!reason)return alert('Selecione o motivo do cancelamento.');
  if(reason==='Outro'&&!details)return alert('Informe a justificativa do cancelamento.');
  if(!matricula)return alert('Informe a matrícula.');
- if(!confirm('Confirma o cancelamento deste adiantamento?'))return;
+ const x=advances.find(a=>a.id===currentId),remaining=x?advanceRemainingQty(x):0;
+ if(!confirm('Confirma o cancelamento do adiantamento? O saldo restante de '+remaining+' UN será encerrado e não ficará mais disponível para retirada.'))return;
  try{
    await apiCall('cancelAdvance','POST',{id:currentId,reason,details,matricula});
    closeModal();await loadAdvances();render();dashboard();
@@ -3148,6 +3167,8 @@ function renderTodayAdvances(){
        withdrawn=advanceWithdrawnQty(x),
        requested=advanceRequestedQty(x),
        cls=status==='solicitado'?' advance-separate':status==='parcial'?' advance-partial':' advance-programmed';
+   let productionCancelButton=!carimbo&&!['retirado','cancelado','descartado'].includes(status)
+      ?`<button type="button" class="btn advance-production-cancel" onclick="event.stopPropagation();openAdvanceCancel('${x.id}')">CANCELAR ADIANTAMENTO</button>`:'';
 
    let statusText=status==='solicitado'
       ?(carimbo?`<span class="advance-separate-status">🟣 SEPARAR ${requested||remaining} UN</span>`:'<span class="advance-wait-auth">⏳ Aguardando separação</span>')
@@ -3167,7 +3188,7 @@ function renderTodayAdvances(){
       </div>
       <div class="request-status">${statusText}</div>
       <div class="request-requester">${x.authorizedByMatricula?`Retirada solicitada por: <b>${escHtml(x.authorizedByMatricula)}</b>`:''}</div>
-      <div class="request-time">Saldo: <b>${remaining} UN</b><br>Para: <b>${formatDateOnly(advanceDateKey(x.forDate)||x.forDate)}</b></div>
+      <div class="request-time">Saldo: <b>${remaining} UN</b><br>Para: <b>${formatDateOnly(advanceDateKey(x.forDate)||x.forDate)}</b>${productionCancelButton}</div>
    </div>`
  }).join('')
 }
